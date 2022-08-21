@@ -1,0 +1,117 @@
+.Wrapper {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.Value {
+  color: #1C8DCD;
+}
+
+.Pin {
+  position: absolute;
+  top: -17.5px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg) scaleY(0.8);
+  transition: left, 1s;
+
+  svg {
+    fill: #1C8DCD;
+  }
+}
+
+.Bar {
+  display: flex;
+  width: 100%;
+  height: 21px;
+  margin-top: 17px;
+
+  .Under,
+  .Normal,
+  .Over {
+    background-color: #C4C4C4;
+  }
+
+  .Under {
+    flex: 1 1 25%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    &.Active {
+      background-color: #dff07f;
+      transition: background-color 1s;
+    }
+
+    &.Equal {
+      flex: 1 1 30%;
+    }
+  }
+
+  .Over {
+    flex: 1 1 25%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    &.Active {
+      background-color: #f5425a;
+      transition: background-color 1s;
+    }
+
+    &.Equal {
+      flex: 1 1 30%;
+    }
+  }
+
+  .Normal {
+    flex: 1 1 50%;
+    margin: 0 1.5px;
+
+    &.Active {
+      background-color: #00c8a4;
+      transition: background-color 1s;
+    }
+
+    &.Equal {
+      flex: 1 1 30%;
+    }
+  }
+}
+
+.Description {
+  display: flex;
+  margin-top: 5px;
+
+  .Under,
+  .Normal,
+  .Over {
+    color: #1C8DCD;
+    font-size: 14px;
+  }
+
+  .Under {
+    flex: 1 1 25%;
+
+    &.Equal {
+      flex: 1 1 30%;
+    }
+  }
+
+  .Over {
+    flex: 1 1 25%;
+
+    &.Equal {
+      flex: 1 1 30%;
+    }
+  }
+
+  .Normal {
+    flex: 1 1 50%;
+
+    &.Equal {
+      flex: 1 1 30%;
+    }
+  }
+}
